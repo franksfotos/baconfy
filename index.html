@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script type="text/javascript" src="jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="bfm.js"></script>
+	<link rel="stylesheet" type="text/css" href="bfm.css">
+	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700">
+</link>
+<title>baconfy.me</title>
+</head>
+<body onload="FocusOnInput();document.getElementById('download').addEventListener('click', download, false);">
+	<div id="header" >
+	<h1>baconfy.me</h1>
+	</div>
+	<div id="banner">Baconfy your Birthday in Walter-White-Style</div>
+	<form action="javascript:baconfy($('#bfnr').val())">
+		
+		<div id="form">
+			<!-- <label for="bfnr">2-digit number</label><br /> */ -->
+			<input id="bfnr" type="number" value="" /><br>
+			<div id="radio">
+				<input type="radio" id="radio" name="opt" value="plain" checked="checked"> Plain-Bacon &nbsp;&nbsp;
+	            <input type="radio" id="radio" name="opt" value="kobe"> Kobe-Pig-Bacon &nbsp;&nbsp; 
+	            <input type="radio" id="radio" name="opt" valudownloadCanvase="veggie"> Veggie-Bacon &nbsp;&nbsp;
+			</div>
+		</div>
+		<div id="form">
+			<input id="bigbutton" type="button" value="Baconfy!" onclick="baconfy($('#bfnr').val())"/>
+		</div>
+	</form>
+
+<div id="canvas-container">
+	<canvas id="baconfied" width="600" height ="400" style="border:none"></canvas>
+</div>
+
+<a id="download" download="download.jpg" >Download as jpeg</a>
+
+</body>
+</html>
