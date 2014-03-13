@@ -31,11 +31,11 @@ function baconfy(bfnr){
 function FocusOnInput()
 {
      document.getElementById("bfnr").focus();
-     document.getElementById('download').addEventListener('click', download, false	);
 }
 
 
 function downloadCanvas() {
+    var objCanvas = document.getElementById('baconfied');
     var dt = objCanvas.toDataURL();
     this.href = dt; //this may not work in the future..
 }
