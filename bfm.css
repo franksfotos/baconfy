@@ -133,13 +133,19 @@ div#radio {
 
 
 }
+
+div#download-container {
+    padding-bottom: 20px;
+}
+
 div#about {
     margin: 0;
     width: 100%;
     background-color: #555;
     padding-left: 0px;
     padding-right: 0px;
-    padding-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-left: 0px;
     border-right: 0px;
     border-bottom: 0px;
@@ -151,5 +157,40 @@ html, body {
 }
 
 #footernav {
-    text-align: float;
+    padding-left: 0px
+}
+
+ul li {
+    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+    /*style the text*/
+    font-size:1em;
+    font-family: 'Source Sans Pro', sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+    letter-spacing:.1em;
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+    text-transform: uppercase;
+    list-style: none;
+    float: none;
+}
+
+ul li a {
+    border-top:5px;
+    border-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+        color: #fff;
+    text-decoration: none;
+}
+
+ul li div {
+    display: none;
+        padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ul li a:hover, ul li a.active {
+    text-decoration: none;
+
+    color: #fff;
+
 }

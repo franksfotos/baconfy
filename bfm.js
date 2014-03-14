@@ -10,6 +10,12 @@ function baconfy(bfnr){
 
 	if(objCanvas.getContext){
 		var context = objCanvas.getContext('2d');	
+		
+		context.rect(0,0,objCanvas.width,objCanvas.height);
+		context.fillStyle="#fff";
+		context.fill();
+
+
 		var imageObj1 = new Image();
 		var imageObj2 = new Image();
 
@@ -40,6 +46,17 @@ function downloadCanvas(link, canvasId, filename) {
 
 $( document ).ready(function() {
 	document.getElementById('download').addEventListener('click', function() {
-	    downloadCanvas(this, 'baconfied', 'baconfy.jpg');
+	    downloadCanvas(this, 'baconfied', 'baconfy.png');
 	}, false);
+	$('ul > li > a').click(function() {
+    	if ($(this).attr('class') != 'active') {
+      		$('ul li div').slideUp();	
+      		$(this).next().slideToggle();
+      		$('ul li a').removeClass('active');
+      		$(this).addClass('active');
+    	}
+    	return false;
+  	});
 });
+
+
