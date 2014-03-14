@@ -25,7 +25,7 @@
 			</div>
 		</div>
 		<div id="form">
-			<input id="bigbutton" type="button" value="Baconfy!" onclick="baconfy($('#bfnr').val())"/>
+			<input class="bigbutton" id="bigbutton" type="button" value="Baconfy!" onclick="baconfy($('#bfnr').val())"/>
 		</div>
 	</form>
 
@@ -33,7 +33,15 @@
 	<canvas id="baconfied" width="600" height ="400" style="border:none"></canvas>
 </div>
 
-<a href="javascript:downloadCanvas()" id="download" download="download.jpg" >Download as jpeg</a>
-
+<div id="download-container" style="display:none">
+	<a class="smallbutton" href="#" id="download" download="download.jpg">Download</a>
+</div>
+<div id="about">
+	<ul id="footernav">
+		<li>About
+		<li>Share
+		<li>Give us a slice of bacon
+	</ul>
+</div>
 </body>
 </html>
