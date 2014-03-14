@@ -1,3 +1,4 @@
+
 div {
 	text-align: center;
 }
@@ -31,9 +32,15 @@ div {
 	text-align: center;
 }
 
+#download-container {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
 
     /***FIRST STYLE THE BUTTON***/
-    input#bigbutton {
+    .bigbutton {
     width:280px;
     background: #3e9cbf; /*the colour of the button*/
     padding: 8px 14px 10px; /*apply some padding inside the button*/
@@ -46,10 +53,11 @@ div {
     text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
     text-transform: uppercase;
     color: #fff;
+    text-decoration: none;
     /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
-    -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    /* -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
     -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
-    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999; 
     /*give the corners a small curve*/
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -59,11 +67,41 @@ div {
     input#bigbutton:hover, input#bigbutton:focus {
     color:#dfe7ea;
     /*reduce the size of the shadow to give a pushed effect*/
-    -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+    /*-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
     -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;*/
     }
 
+   .smallbutton {
+    background: #3e9cbf; /*the colour of the button*/
+    padding: 4px 7px 5px; /*apply some padding inside the button*/
+    border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
+    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+    /*style the text*/
+    font-size:1em;
+    font-family: 'Source Sans Pro', sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+    letter-spacing:.1em;
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+    /* -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999; 
+    /*give the corners a small curve*/
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    }
+    /***SET THE BUTTON'S HOVER AND FOCUS STATES***/
+    input#bigbutton:hover, input#bigbutton:focus {
+    color:#dfe7ea;
+    /*reduce the size of the shadow to give a pushed effect*/
+    /*-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;*/
+    }
 
 #bfnr {
 	font-family: 'Arvo';
@@ -94,4 +132,24 @@ div#radio {
 
 
 
+}
+div#about {
+    margin: 0;
+    width: 100%;
+    background-color: #555;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+#footernav {
+    text-align: float;
 }
