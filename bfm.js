@@ -4,7 +4,6 @@ function baconfy(bfnr){
 	var fileNameNr1 = "./img/" + bfnr[0] + ".png"
 	var fileNameNr2 = "./img/" + bfnr[1] + ".png"
 
-	console.log(fileNameNr1)
 	var objCanvas = document.getElementById('baconfied');
 	
 	objCanvas.width = objCanvas.width;
@@ -23,9 +22,8 @@ function baconfy(bfnr){
 			context.drawImage(imageObj2,this.width*.4,0,imageObj2.width*.4,imageObj2.height*.4)
 		};
 		imageObj2.src = fileNameNr2;
-	}
-
-	
+		$('#download-container').show();
+	}	
 }
 
 function FocusOnInput()
@@ -34,11 +32,14 @@ function FocusOnInput()
 }
 
 
-function downloadCanvas() {
-    var objCanvas = document.getElementById('baconfied');
-    var dt = objCanvas.toDataURL();
-    this.href = dt; //this may not work in the future..
+function downloadCanvas(link, canvasId, filename) {
+   	link.href = document.getElementById(canvasId).toDataURL("image/jpeg");
+	link.download = filename;
 }
 
 
-
+$( document ).ready(function() {
+	document.getElementById('download').addEventListener('click', function() {
+	    downloadCanvas(this, 'baconfied', 'baconfy.jpg');
+	}, false);
+});
