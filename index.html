@@ -16,16 +16,22 @@
 	<div id="banner">Baconfy your Birthday in Walter-White-Style. Bitch.</div>
 	<form action="javascript:baconfy($('#bfnr').val())">
 		
-		<div id="form">
+		<div class="form">
 			<!-- <label for="bfnr">2-digit number</label><br /> */ -->
 			<input id="bfnr" type="number" value="" /><br>
-			<div id="radio">
-				<input type="radio" id="radio" name="opt" value="plain" checked="checked"> Plain-Bacon &nbsp;&nbsp;
-	            <input type="radio" id="radio" name="opt" value="kobe"> Kobe-Pig-Bacon &nbsp;&nbsp; 
-	            <input type="radio" id="radio" name="opt" valudownloadCanvase="veggie"> Veggie-Bacon &nbsp;&nbsp;
-			</div>
+			<section id="radio-container">
+				<div id="radio-left">
+					<input type="radio" id="radio" name="opt-bacon" value="plain" checked="checked"> Plain-Bacon &nbsp;&nbsp;</br>
+		            <input type="radio" id="radio" name="opt-bacon" value="kobe"> Kobe-Pig-Bacon &nbsp;&nbsp; </br>
+		            <input type="radio" id="radio" name="opt-bacon" valudownloadCanvase="veggie"> Veggie-Bacon &nbsp;&nbsp;
+				</div>
+				<div id="radio-right">
+					<input type="radio" id="parsley" name="opt-egg" value="plain" checked="checked"> Scrambled eggs &nbsp;&nbsp;</br>
+		            <input type="radio" id="parsley" name="opt-egg" value="kobe"> Scrambled eggs with Parsley &nbsp;&nbsp; 
+				</div>
+			</section>
 		</div>
-		<div id="form">
+		<div class="form">
 			<input class="bigbutton" id="bigbutton" type="button" value="Baconfy!" onclick="baconfy($('#bfnr').val())"/>
 		</div>
 	</form>
@@ -40,12 +46,12 @@
 <div id="about">
 	<ul id="footernav">
 		<li id="about"><a href="#">About</a>
-		<div>The idea of the site was born on Franks 40th Birthday, when Wiebke spontanously clicked this Image for him.</div></li>
+		<div>The idea of the site was born on Franks 40th Birthday, when Wiebke spontanously designed <a href="./img/classic.jpeg">this Image</a> for being a hommage to 'Breaking Bad', the all-time greatest tv series.</div></li>
 		<li id="share"><a href="#">Share</a>
-		<div>Like us on facebook / tweet about it / eMail somebody</div>
+		<div><a href="http://www.facebook.com/baconfy">facebook site</a> / <a href="https://twitter.com/intent/tweet?text=Happy+Birthday+Breaking+Bad+Fans!+I+baconfied+my+age+in+Walter-White-Style+on+this+site%3A+http%3A%2F%2Fbaconfy.com">tweet about</a> / eMail somebody</div>
 		</li>
 		<li id="donate"><a href="#">Give us a slice of bacon</a>
-		<div>flattr integration</div></li>
+		<div><script id='fb277hf'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=franksfotos&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fb277hf');</script></div></li>
 	</ul>
 </div>
 </body>

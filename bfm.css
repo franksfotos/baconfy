@@ -110,29 +110,51 @@ div {
 	height: 50px;
 	width: 100px;
 	text-align: center;
+    
 }
 
 
 
-div#form {
+.form {
 	padding-bottom: 20px
+
 }
 
-div#radio {
-    padding-top: 20px;
+#radio-container {
+    width: 60%;
+    height: 80px;
+    margin: auto;
+    padding: 5px;
+}
+
+div#radio-left {
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-family: 'Source Sans Pro';
-    font-size: 20px;
-    text-align: center;
-    line-height: 52px;
+    font-size: 16px;
+    text-align: left;
+    line-height: 20px;
     font-weight: 300;
     text-transform: uppercase;
-    padding-left: 10%;
-    padding-right: 10%;
     letter-spacing: 2px;
-
-
-
+    width: 50%;
+    float: left;
+    
 }
+
+div#radio-right {
+    padding-top: 20px;
+    font-family: 'Source Sans Pro';
+    font-size: 16px;
+    text-align: left;
+    line-height: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 50%;
+    
+}
+
 
 div#download-container {
     padding-bottom: 20px;
@@ -185,6 +207,8 @@ ul li a {
 ul li div {
     display: none;
         padding-top: 10px;
+        padding-left: 20%;
+        padding-right: 20%;
     padding-bottom: 10px;
 }
 
