@@ -33,6 +33,7 @@ div {
 }
 
 #download-container {
+    margin-top: 20px;
     display: none;
     width: 100%;
     text-align: center;
@@ -43,7 +44,8 @@ div {
     .bigbutton {
     width:280px;
     background: #3e9cbf; /*the colour of the button*/
-    padding: 8px 14px 10px; /*apply some padding inside the button*/
+    padding: 8px 4px 8px; /*apply some padding inside the button*/
+    margin-bottom: 20px;
     border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
     /*style the text*/
@@ -104,13 +106,12 @@ div {
     }
 
 #bfnr {
-	font-family: 'Arvo';
-	font-size: 36px;
-	line-height: 50px;
-	height: 50px;
-	width: 100px;
-	text-align: center;
-    
+	font-family: 'Source Sans Pro';
+	font-size: 85px;
+	line-height: 100px;
+	height: 110px;
+	width: 160px;
+	text-align: center;    
 }
 
 
@@ -121,10 +122,11 @@ div {
 }
 
 #radio-container {
-    width: 60%;
-    height: 80px;
+    width: 70%;
+    height: 100px;
     margin: auto;
-    padding: 5px;
+    padding: 20px;
+    padding-top: 30px; 
 }
 
 div#radio-left {
@@ -137,13 +139,15 @@ div#radio-left {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 2px;
-    width: 50%;
+    width: 30%;
+    padding-left: 20%;
     float: left;
+    height: 100px;
     
 }
 
 div#radio-right {
-    padding-top: 20px;
+    padding-top: 10px;
     font-family: 'Source Sans Pro';
     font-size: 16px;
     text-align: left;
@@ -151,8 +155,8 @@ div#radio-right {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-left: 50%;
-    
+    margin-left: 30%;
+    height: 100px;
 }
 
 

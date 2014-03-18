@@ -5,7 +5,18 @@
 	<script type="text/javascript" src="bfm.js"></script>
 	<link rel="stylesheet" type="text/css" href="bfm.css">
 	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700">
-	
+  	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-49119664-1']);
+		_gaq.push(['_gat._anonymizeIp']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+	</script>
+
 </link>
 <title>baconfy.me</title>
 </head>
@@ -21,13 +32,16 @@
 			<input id="bfnr" type="number" value="" /><br>
 			<section id="radio-container">
 				<div id="radio-left">
-					<input type="radio" id="radio" name="opt-bacon" value="plain" checked="checked"> Plain-Bacon &nbsp;&nbsp;</br>
-		            <input type="radio" id="radio" name="opt-bacon" value="kobe"> Kobe-Pig-Bacon &nbsp;&nbsp; </br>
-		            <input type="radio" id="radio" name="opt-bacon" valudownloadCanvase="veggie"> Veggie-Bacon &nbsp;&nbsp;
+					<input type="radio" id="plain" name="opt-bacon" value="plain" checked="checked"> Plain-Bacon &nbsp;&nbsp;</br>
+		            <input type="radio" id="kobe" name="opt-bacon" value="kobe"> Kobe-Pig-Bacon &nbsp;&nbsp; </br>
+		            <input type="radio" id="veggie" name="opt-bacon" valudownloadCanvase="veggie"> Veggie-Bacon &nbsp;&nbsp;
 				</div>
 				<div id="radio-right">
-					<input type="radio" id="parsley" name="opt-egg" value="plain" checked="checked"> Scrambled eggs &nbsp;&nbsp;</br>
-		            <input type="radio" id="parsley" name="opt-egg" value="kobe"> Scrambled eggs with Parsley &nbsp;&nbsp; 
+					<input type="radio" id="egg_plate_plain" name="opt-egg" value="egg_plate_plain" checked="checked"> Eggs on a plate&nbsp;&nbsp;</br>
+		            <input type="radio" id="egg_plate_chives" name="opt-egg" value="egg_plate_chives"> Eggs with chives on a plate&nbsp;&nbsp;</br>
+					<input type="radio" id="egg_noplate_plain" name="opt-egg" value="egg_noplate_plain" > Eggs on the floor&nbsp;&nbsp;</br>
+		            <input type="radio" id="egg_noplate_chives" name="opt-egg" value="egg_noplate_chives"> Eggs with chives on the floor&nbsp;&nbsp;</br>
+
 				</div>
 			</section>
 		</div>
@@ -37,16 +51,16 @@
 	</form>
 
 <div id="canvas-container">
-	<canvas id="baconfied" width="600" height ="400" style="border:none"></canvas>
+	<canvas id="baconfied" width="0" height ="0" style="border:none"></canvas>
 </div>
 
 <div id="download-container" style="display:none">
-	<a class="smallbutton" id="download" download="test.jpg">Download</a>
+	<a class="smallbutton" id="download" download="baconfy">Download</a>
 </div>
 <div id="about">
 	<ul id="footernav">
 		<li id="about"><a href="#">About</a>
-		<div>The idea of the site was born on Franks 40th Birthday, when Wiebke spontanously designed <a href="./img/classic.jpeg">this Image</a> for being a hommage to 'Breaking Bad', the all-time greatest tv series.</div></li>
+		<div>The idea of the site was born on Franks 40th Birthday, when Wiebke spontanously designed <a href="./img/classic.jpeg">this Image</a> being a hommage to 'Breaking Bad', the all-time greatest tv series.</div></li>
 		<li id="share"><a href="#">Share</a>
 		<div><a href="http://www.facebook.com/baconfy">facebook site</a> / <a href="https://twitter.com/intent/tweet?text=Happy+Birthday+Breaking+Bad+Fans!+I+baconfied+my+age+in+Walter-White-Style+on+this+site%3A+http%3A%2F%2Fbaconfy.com">tweet about</a> / <a href="mailto:?subject=Recommendation: Baconfy&body=Hello,%0A%0Athis is a great site: http://baconfy.me">eMail about</a></div>
 		</li>

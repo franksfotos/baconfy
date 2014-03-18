@@ -6,7 +6,30 @@ function baconfy(bfnr){
 
 	var objCanvas = document.getElementById('baconfied');
 	
-	objCanvas.width = objCanvas.width;
+	var eggOption = $("input[type='radio'][name='opt-egg']:checked").val();
+	var	offsetX = 70;
+	var	offsetY = 138;
+
+	if (eggOption == 'egg_plate_plain' || eggOption == 'egg_plate_chives') {
+		// console.log ("Teller")
+		objCanvas.width = 900;	
+		objCanvas.height = 900;
+		offsetX += 150;
+		offsetY += 150;
+	}
+	else {
+		//console.log ("Kein Teller");
+		objCanvas.width = 600;
+		objCanvas.height = 600;
+
+	};
+
+	if ( bfnr.length == 1 ) {
+		offsetX += 223/2;
+	};
+
+	//objCanvas.width = objCanvas.width;
+
 
 	if(objCanvas.getContext){
 		var context = objCanvas.getContext('2d');	
@@ -15,20 +38,31 @@ function baconfy(bfnr){
 		context.fillStyle="#fff";
 		context.fill();
 
-
+		var imageEggs = new Image();
 		var imageObj1 = new Image();
 		var imageObj2 = new Image();
 
 		imageObj1.onload = function() {
-			context.drawImage(imageObj1,0,0,imageObj1.width*.4,imageObj1.height*.4)
+			context.drawImage(imageObj1,offsetX,offsetY,imageObj1.width,imageObj1.height)
 		};
-		imageObj1.src = fileNameNr1;
 
 		imageObj2.onload = function() {
-			context.drawImage(imageObj2,this.width*.4,0,imageObj2.width*.4,imageObj2.height*.4)
+			context.drawImage(imageObj2,offsetX+this.width,offsetY,imageObj2.width,imageObj2.height)
 		};
-		imageObj2.src = fileNameNr2;
+
+		imageEggs.onload = function() {
+			context.drawImage(imageEggs,0,0,imageEggs.width,imageEggs.height)
+			imageObj1.src = fileNameNr1;
+			imageObj2.src = fileNameNr2;
+		};
+
+		imageEggs.src = './img/' + eggOption + '.png';
+
 		$('#download-container').show();
+	
+		var WH = $(window).height();  
+		var SH = $('body')[0].scrollHeight;
+		$('html, body').stop().animate({scrollTop: SH-WH-$('#about').height()-40}, 1000);	
 	}	
 }
 
@@ -46,7 +80,7 @@ function downloadCanvas(link, canvasId, filename) {
 
 $( document ).ready(function() {
 	document.getElementById('download').addEventListener('click', function() {
-	    downloadCanvas(this, 'baconfied', 'baconfy.png');
+	    downloadCanvas(this, 'baconfied', 'baconfy.jpeg');
 	}, false);
 	$('ul > li > a').click(function() {
     	if ($(this).attr('class') != 'active') {
