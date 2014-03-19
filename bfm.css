@@ -27,7 +27,7 @@ div {
 	line-height: 52px;
 	font-weight: 300;
 	text-transform: uppercase;
-	padding-top: 40px;
+	padding-top: 10px;
 	padding-bottom: 40px;
 	padding-left: 10%;
 	padding-right: 10%;
@@ -50,7 +50,7 @@ div {
     /***FIRST STYLE THE BUTTON***/
     .bigbutton {
     -webkit-appearance: none;
-    width:280px;
+    width:340px;
     background: #3e9cbf; /*the colour of the button*/
     padding: 8px 4px 8px; /*apply some padding inside the button*/
     margin-bottom: 20px;
@@ -69,9 +69,9 @@ div {
     -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
     box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999; 
     /*give the corners a small curve*/
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
     }
     /***SET THE BUTTON'S HOVER AND FOCUS STATES***/
     input#bigbutton:hover, input#bigbutton:focus {
@@ -102,7 +102,7 @@ div {
     /*give the corners a small curve*/
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
-    border-radius: 4px;
+    border-radius: 4px; */
     }
     /***SET THE BUTTON'S HOVER AND FOCUS STATES***/
     input#smallbutton:hover, input#smallbutton:focus {
@@ -118,8 +118,8 @@ div {
 	font-family: 'Source Sans Pro';
 	font-size: 85px;
 	line-height: 100px;
-	height: 110px;
-	width: 160px;
+	height: 105px;
+	width: 150px;
 	text-align: center;    
 }
 
@@ -131,11 +131,19 @@ div {
 }
 
 #radio-container {
-    width: 70%;
+    width: 68%;
     height: 100px;
     margin: auto;
     padding: 20px;
-    padding-top: 30px; 
+    padding-top: 5px;
+    margin-bottom: 15px;
+    font-family: 'Source Sans Pro';
+    font-size: 18px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 div#radio-left {
@@ -246,4 +254,19 @@ div#impressum {
     padding-right: 20%;
     padding-bottom: 50px;
     font-family: 'Source Sans Pro';
+
+}
+
+.box {
+ float: left;
+ width: 32%;
+ margin-right: 2%;
+ padding: 0px;
+ box-sizing: border-box;
+ text-align: center;
+ 
+}
+
+.box:last-child {
+     margin-right: 0;
 }

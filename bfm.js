@@ -6,7 +6,11 @@ function baconfy(bfnr){
 
 	var objCanvas = document.getElementById('baconfied');
 	
-	var eggOption = $("input[type='radio'][name='opt-egg']:checked").val();
+
+	var eggOption = 'egg_' + $("input[type='radio'][name='opt-plate']:checked").val() + '_' + $("input[type='radio'][name='opt-egg']:checked").val();
+	
+	console.log (eggOption);
+
 	var	offsetX = 70;
 	var	offsetY = 138;
 

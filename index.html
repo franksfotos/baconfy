@@ -32,22 +32,26 @@
 			<!-- <label for="bfnr">2-digit number</label><br /> */ -->
 			<input id="bfnr" type="number" value="" /><br>
 			<section id="radio-container">
-				<div id="radio-left">
-					<input type="radio" id="plain" name="opt-bacon" value="plain" checked="checked"> Plain-Bacon &nbsp;&nbsp;</br>
-		            <input type="radio" id="kobe" name="opt-bacon" value="kobe"> Kobe-Pig-Bacon &nbsp;&nbsp; </br>
-		            <input type="radio" id="veggie" name="opt-bacon" valudownloadCanvase="veggie"> Veggie-Bacon &nbsp;&nbsp;
+				<div class="box">
+					<p>choose your Bacon</p>
+					<input type="radio" id="plain" name="opt-bacon" value="plain" checked="checked"> Regular Bacon</br>
+		            <input type="radio" id="veggie" name="opt-bacon" valud="veggie"> Veggie Bacon
 				</div>
-				<div id="radio-right">
-					<input type="radio" id="egg_plate_plain" name="opt-egg" value="egg_plate_plain" checked="checked"> Eggs on a plate&nbsp;&nbsp;</br>
-		            <input type="radio" id="egg_plate_chives" name="opt-egg" value="egg_plate_chives"> Eggs with chives on a plate&nbsp;&nbsp;</br>
-					<input type="radio" id="egg_noplate_plain" name="opt-egg" value="egg_noplate_plain" > Eggs on the floor&nbsp;&nbsp;</br>
-		            <input type="radio" id="egg_noplate_chives" name="opt-egg" value="egg_noplate_chives"> Eggs with chives on the floor&nbsp;&nbsp;</br>
 
+				<div class="box">
+					<p>Choose your Eggs</p>
+					<input type="radio" id="chives" name="opt-egg" value="chives" checked="checked"> with chives</br>
+		            <input type="radio" id="plain" name="opt-egg" value="plain"> w/o chives
+				</div>
+				<div class="box">
+					<p>Need a plate?</p>
+					<input type="radio" id="plate" name="opt-plate" value="plate" checked="checked"> Yes, please</br>
+		            <input type="radio" id="noplate" name="opt-plate" value="noplate"> No, thanks
 				</div>
 			</section>
 		</div>
 		<div class="form">
-			<input class="bigbutton" id="bigbutton" type="button" value="Baconfy!" onclick="baconfy($('#bfnr').val())"/>
+			<input class="bigbutton" id="bigbutton" type="button" value="Baconfy now" onclick="baconfy($('#bfnr').val())"/>
 		</div>
 		<!--<div>Click Count: <?php echo getClickCount(); ?></div>-->
 	</form>
