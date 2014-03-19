@@ -1,3 +1,10 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+textarea, input { outline: none; }
 
 div {
 	text-align: center;
@@ -42,6 +49,7 @@ div {
 
     /***FIRST STYLE THE BUTTON***/
     .bigbutton {
+    -webkit-appearance: none;
     width:280px;
     background: #3e9cbf; /*the colour of the button*/
     padding: 8px 4px 8px; /*apply some padding inside the button*/
@@ -68,11 +76,11 @@ div {
     /***SET THE BUTTON'S HOVER AND FOCUS STATES***/
     input#bigbutton:hover, input#bigbutton:focus {
     color:#dfe7ea;
+    }
     /*reduce the size of the shadow to give a pushed effect*/
     /*-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
     -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;*/
-    }
+    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;}*/
 
    .smallbutton {
     background: #3e9cbf; /*the colour of the button*/
@@ -97,13 +105,14 @@ div {
     border-radius: 4px;
     }
     /***SET THE BUTTON'S HOVER AND FOCUS STATES***/
-    input#bigbutton:hover, input#bigbutton:focus {
+    input#smallbutton:hover, input#smallbutton:focus {
     color:#dfe7ea;
+    }
     /*reduce the size of the shadow to give a pushed effect*/
     /*-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
     -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;*/
-    }
+    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;}*/
+    
 
 #bfnr {
 	font-family: 'Source Sans Pro';
