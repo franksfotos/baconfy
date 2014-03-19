@@ -16,13 +16,14 @@
 		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
 	</script>
-
-</link>
-<title>baconfy.me</title>
+	 
+	</link>
+	<title>baconfy.me</title>
 </head>
 <body onload="FocusOnInput();document.getElementById('download').addEventListener('click', download, false);">
 	<div id="header" >
-	<h1>baconfy.me</h1>
+	<!--<h1>baconfy.me</h1>-->
+	<img src="logo.jpg" width="35%" />
 	</div>
 	<div id="banner">Baconfy your Birthday in Walter-White-Style. Bitch.</div>
 	<form action="javascript:baconfy($('#bfnr').val())">
@@ -48,6 +49,7 @@
 		<div class="form">
 			<input class="bigbutton" id="bigbutton" type="button" value="Baconfy!" onclick="baconfy($('#bfnr').val())"/>
 		</div>
+		<!--<div>Click Count: <?php echo getClickCount(); ?></div>-->
 	</form>
 
 <div id="canvas-container">
@@ -66,8 +68,8 @@
 		</li>
 		<li id="donate"><a href="#">Give us a slice of bacon</a>
 		<div><script id='fb277hf'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=franksfotos&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fb277hf');</script></div></li>
-		<li id="impressum"><a href="#">Impressum</a>
-		<div></div></li>
+		<a href="impressum.html">Impressum</a>
+		
 
 	</ul>
 </div>

@@ -195,7 +195,7 @@ html, body {
     padding-left: 0px
 }
 
-ul li {
+ul li, ul a {
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
     /*style the text*/
     font-size:1em;
@@ -205,7 +205,10 @@ ul li {
     text-transform: uppercase;
     list-style: none;
     float: none;
+    text-decoration: none;
+    color: #fff;
 }
+
 
 ul li a {
     border-top:5px;
@@ -225,9 +228,22 @@ ul li div {
     padding-bottom: 10px;
 }
 
-ul li a:hover, ul li a.active {
+ul li a:hover, ul li a:active {
     text-decoration: none;
-
     color: #fff;
 
+}
+
+ul a:hover, ul a:active {
+    text-decoration: none;
+    color: #fff;  
+}
+
+div#impressum {
+    max-width: 500px;   
+    text-align: left;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 50px;
+    font-family: 'Source Sans Pro';
 }
