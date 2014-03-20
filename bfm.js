@@ -66,7 +66,8 @@ function baconfy(bfnr){
 	
 		var WH = $(window).height();  
 		var SH = $('body')[0].scrollHeight;
-		$('html, body').stop().animate({scrollTop: SH-WH-$('#about').height()-40}, 1000);	
+		$('html, body').stop().animate({scrollTop: SH-WH-$('#about').height()-40}, 1000);
+		incCounter();
 	}	
 }
 
@@ -81,11 +82,40 @@ function downloadCanvas(link, canvasId, filename) {
 	link.download = filename;
 }
 
+function showHowto()
+    {
+   		$("div.howto").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+    }
+
+function getCounter()
+	{
+		$.post('count.php', 'val=-1', function (response) {
+      	$('#counter').text(response);
+   		});		
+	}
+
+function incCounter() {
+	$.post('count.php', 'val=' + $('#counter').text() , function (response) {
+    	$('#counter').text(response);
+   	});		
+}
+
 
 $( document ).ready(function() {
 	document.getElementById('download').addEventListener('click', function() {
 	    downloadCanvas(this, 'baconfied', 'baconfy.jpeg');
 	}, false);
+	console.log ( $("#bfnr").val() );
+	
+	if ( !$.isNumeric($("#bfnr").val() ) ) {
+		setTimeout(showHowto,2000);	
+	}
+	
+	$('#bfnr').on('input', function() {
+    	$("div.howto").fadeOut(300);
+    });
+
+		
 	$('ul > li > a').click(function() {
     	if ($(this).attr('class') != 'active') {
       		$('ul li div').slideUp();	
@@ -95,6 +125,7 @@ $( document ).ready(function() {
     	}
     	return false;
   	});
-});
+		
 
+	});
 
