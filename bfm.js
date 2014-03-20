@@ -108,7 +108,7 @@ $( document ).ready(function() {
 	console.log ( $("#bfnr").val() );
 	
 	if ( !$.isNumeric($("#bfnr").val() ) ) {
-		setTimeout(showHowto,2000);	
+		setTimeout(showHowto,4000);	
 	}
 	
 	$('#bfnr').on('input', function() {
