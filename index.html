@@ -1,10 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	
+	<meta charset="utf-8" />
 	<script type="text/javascript" src="jquery-1.11.0.js"></script>
 	<script type="text/javascript" src="bfm.js"></script>
 	<link rel="stylesheet" type="text/css" href="bfm.css">
-	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700">
+	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700">
+  	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cookie"  >
   	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-49119664-1']);
@@ -19,8 +22,10 @@
 	 
 	</link>
 	<title>baconfy.me</title>
+	
 </head>
-<body onload="FocusOnInput();document.getElementById('download').addEventListener('click', download, false);">
+
+<body onload="FocusOnInput();document.getElementById('download').addEventListener('click', download, false);getCounter();">
 	<div id="header" >
 	<!--<h1>baconfy.me</h1>-->
 	<img src="logo.jpg" width="35%" />
@@ -28,9 +33,14 @@
 	<div id="banner">Baconfy your Birthday in Walter-White-Style. Bitch.</div>
 	<form action="javascript:baconfy($('#bfnr').val())">
 		
+		<div class="howto-container">
+		<div class="howto" data-showhelp="true">
+		 &lt;- Enter your age here
+		</div>
+		</div>
 		<div class="form">
 			<!-- <label for="bfnr">2-digit number</label><br /> */ -->
-			<input id="bfnr" type="number" value="" /><br>
+			<input id="bfnr" type="number" autocomplete="off" value="" /><br>
 			<section id="radio-container">
 				<div class="box">
 					<p>choose your Bacon</p>
@@ -53,7 +63,6 @@
 		<div class="form">
 			<input class="bigbutton" id="bigbutton" type="button" value="Baconfy now" onclick="baconfy($('#bfnr').val())"/>
 		</div>
-		<!--<div>Click Count: <?php echo getClickCount(); ?></div>-->
 	</form>
 
 <div id="canvas-container">
@@ -66,14 +75,13 @@
 <div id="about">
 	<ul id="footernav">
 		<li id="about"><a href="#">About</a>
-		<div>The idea of the site was born on Franks 40th Birthday, when Wiebke spontanously designed <a href="./img/classic.jpeg">this Image</a> being a hommage to 'Breaking Bad', the all-time greatest tv series.</div></li>
+	<div>The idea of the site was born on Franks 40th Birthday, when Wiebke spontanously designed <a id="link" href="./img/classic.jpeg">this Image</a> being a hommage to »Breaking Bad«, the all-time greatest tv series.<br /> Since March 2014 there were <span id="counter">???</span> baconfications done totally.</div></li>
 		<li id="share"><a href="#">Share</a>
 		<div><a href="http://www.facebook.com/baconfy">facebook site</a> / <a href="https://twitter.com/intent/tweet?text=Happy+Birthday+Breaking+Bad+Fans!+I+baconfied+my+age+in+Walter-White-Style+on+this+site%3A+http%3A%2F%2Fbaconfy.com">tweet about</a> / <a href="mailto:?subject=Recommendation: Baconfy&body=Hello,%0A%0Athis is a great site: http://baconfy.me">eMail about</a></div>
 		</li>
 		<li id="donate"><a href="#">Give us a slice of bacon</a>
 		<div><script id='fb277hf'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=franksfotos&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fb277hf');</script></div></li>
 		<a href="impressum.html">Impressum</a>
-		
 
 	</ul>
 </div>
