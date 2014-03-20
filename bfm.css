@@ -7,36 +7,36 @@ input[type=number]::-webkit-outer-spin-button {
 textarea, input { outline: none; }
 
 div {
-	text-align: center;
+    text-align: center;
 }
 
 #header h1 {
     color: #ED786A;
-    font-family: 'Arvo';
+    font-family: 'Source Sans Pro';
     font-weight: 700;
     text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
- 	letter-spacing: 9px;
- 	padding-top: 40px;   
- 	text-transform: uppercase;
+    letter-spacing: 9px;
+    padding-top: 40px;   
+    text-transform: uppercase;
 }
 
 #banner {
-	font-family: 'Source Sans Pro';
-	text-align: center;
-	font-size: 33px;
-	line-height: 52px;
-	font-weight: 300;
-	text-transform: uppercase;
-	padding-top: 10px;
-	padding-bottom: 40px;
-	padding-left: 10%;
-	padding-right: 10%;
-	letter-spacing: 2px;
+    font-family: 'Source Sans Pro';
+    text-align: center;
+    font-size: 33px;
+    line-height: 52px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+    letter-spacing: 2px;
 }
 
 #canvas-container {
-	width: 100%;
-	text-align: center;
+    width: 100%;
+    text-align: center;
 }
 
 #download-container {
@@ -115,18 +115,18 @@ div {
     
 
 #bfnr {
-	font-family: 'Source Sans Pro';
-	font-size: 85px;
-	line-height: 100px;
-	height: 105px;
-	width: 150px;
-	text-align: center;    
+    font-family: 'Source Sans Pro';
+    font-size: 85px;
+    line-height: 100px;
+    height: 105px;
+    width: 150px;
+    text-align: center;    
 }
 
 
 
 .form {
-	padding-bottom: 20px
+    padding-bottom: 20px
 
 }
 
@@ -203,13 +203,13 @@ html, body {
     padding-left: 0px
 }
 
-ul li, ul a {
+ul#footernav li, ul#footernav a {
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
     /*style the text*/
     font-size:1em;
     font-family: 'Source Sans Pro', sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
     letter-spacing:.1em;
-    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+    /*text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
     text-transform: uppercase;
     list-style: none;
     float: none;
@@ -218,25 +218,27 @@ ul li, ul a {
 }
 
 
-ul li a {
+a#link {
     border-top:5px;
     border-bottom: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
     text-decoration: none;
-        color: #fff;
-    text-decoration: none;
+    color: #fff;
+    text-decoration: underline;
 }
 
-ul li div {
+ul#footernav li div {
     display: none;
         padding-top: 10px;
         padding-left: 20%;
         padding-right: 20%;
-    padding-bottom: 10px;
+        padding-bottom: 10px;
+        color: #000;
+        cursor: auto;
 }
 
-ul li a:hover, ul li a:active {
+ul li a:hover, ul li a:active, #counter {
     text-decoration: none;
     color: #fff;
 
@@ -269,4 +271,21 @@ div#impressum {
 
 .box:last-child {
      margin-right: 0;
+}
+
+.howto {
+    font-family: Cookie;
+    font-weight: 400;
+    font-size: 30px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 58%;
+    background: #d7d7d7;
+    padding: 10px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+       -moz-box-shadow: 0 8px 6px -6px black;
+            box-shadow: 0 8px 6px -6px black;
+    display: none;
+}
+
 }
