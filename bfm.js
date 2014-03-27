@@ -1,10 +1,18 @@
 function baconfy(bfnr){
 	
-	var fileNameNr1 = "./img/" + bfnr[0] + ".png"
-	var fileNameNr2 = "./img/" + bfnr[1] + ".png"
+	var v = '';
+
+	if ($('input[name=opt-bacon]:checked','#form').val() == 'veggie') {
+		v = 'v';
+	};
+
+	var fileNameNr1 = "./img/" + v + bfnr[0] + ".png";
+	var fileNameNr2 = "./img/" + v + bfnr[1] + ".png";
 	if (bfnr[0]==bfnr[1]) {
-		fileNameNr2 = "./img/sz/" + bfnr[0] + "a.png"
+		fileNameNr2 = "./img/sz/" + v + bfnr[0] + "a.png"
 	}
+
+	console.log (fileNameNr1);
 
 	var objCanvas = document.getElementById('baconfied');
 
@@ -57,8 +65,8 @@ function baconfy(bfnr){
 		};
 
 		imageBfm.onload = function() {
-			x = this.width * .20
-			y = this.height * .20
+			x = this.width ;
+			y = this.height ;
 			context.drawImage(imageBfm,objCanvas.width-x,objCanvas.height-y,x,y);
 			console.log(objCanvas.width);
 		};
@@ -68,7 +76,7 @@ function baconfy(bfnr){
 			context.drawImage(imageEggs,0,0,imageEggs.width,imageEggs.height)
 			imageObj1.src = fileNameNr1;
 			imageObj2.src = fileNameNr2;
-			//imageBfm.src = 'logo_me.jpg';
+			imageBfm.src = 'logo_me.jpg';
 		};
 
 		
