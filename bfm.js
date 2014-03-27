@@ -1,11 +1,12 @@
 function baconfy(bfnr){
 	
-
 	var fileNameNr1 = "./img/" + bfnr[0] + ".png"
 	var fileNameNr2 = "./img/" + bfnr[1] + ".png"
+	if (bfnr[0]==bfnr[1]) {
+		fileNameNr2 = "./img/sz/" + bfnr[0] + "a.png"
+	}
 
 	var objCanvas = document.getElementById('baconfied');
-	
 
 	var eggOption = 'egg_' + $("input[type='radio'][name='opt-plate']:checked").val() + '_' + $("input[type='radio'][name='opt-egg']:checked").val();
 	
@@ -45,6 +46,7 @@ function baconfy(bfnr){
 		var imageEggs = new Image();
 		var imageObj1 = new Image();
 		var imageObj2 = new Image();
+		var imageBfm = new Image();
 
 		imageObj1.onload = function() {
 			context.drawImage(imageObj1,offsetX,offsetY,imageObj1.width,imageObj1.height)
@@ -54,13 +56,25 @@ function baconfy(bfnr){
 			context.drawImage(imageObj2,offsetX+this.width,offsetY,imageObj2.width,imageObj2.height)
 		};
 
+		imageBfm.onload = function() {
+			x = this.width * .20
+			y = this.height * .20
+			context.drawImage(imageBfm,objCanvas.width-x,objCanvas.height-y,x,y);
+			console.log(objCanvas.width);
+		};
+
+
 		imageEggs.onload = function() {
 			context.drawImage(imageEggs,0,0,imageEggs.width,imageEggs.height)
 			imageObj1.src = fileNameNr1;
 			imageObj2.src = fileNameNr2;
+			//imageBfm.src = 'logo_me.jpg';
 		};
 
+		
 		imageEggs.src = './img/' + eggOption + '.png';
+
+		
 
 		$('#download-container').show();
 	
@@ -68,6 +82,8 @@ function baconfy(bfnr){
 		var SH = $('body')[0].scrollHeight;
 		$('html, body').stop().animate({scrollTop: SH-WH-$('#about').height()-40}, 1000);
 		incCounter();
+
+
 	}	
 }
 
